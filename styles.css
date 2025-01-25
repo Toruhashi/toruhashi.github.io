@@ -8,7 +8,7 @@ body, html {
 
 /* Background Styling */
 .background {
-    background: linear-gradient(135deg, #815dd6, #a780f5);
+    background: #3c2b64;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -17,42 +17,53 @@ body, html {
 
 /* Card Styling */
 .card {
-    background-color: white;
+    background-color: #333333;
     border-radius: 20px;
-    width: 300px;
-    padding: 20px;
+    border: 2px solid #555555;
+    width: 250px;
+    padding: 30px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     position: relative;
+    overflow: visible;
 }
 
-/* Profile Picture Placeholder */
+/* Profile Picture */
 .profile-picture {
-    width: 80px;
-    height: 80px;
-    background-color: #f0f0f0;
+    width: 123px;
+    height: 123px;
+    background-image: url(https://cdn.discordapp.com/attachments/1066035899269402687/1332659697576312852/2bceba9a668433dfe0930fefaf348a76.png?ex=67960f8f&is=6794be0f&hm=766f3d6aa230abfb0afa7fcb4c095b461cfd3832edfd88023fd346088f5cc2a8&);
+    background-size: cover;
+    background-position: center;
     border-radius: 50%;
-    margin: 0 auto -40px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    color: #666;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: -61.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #555555;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Card Heading */
 .card h1 {
-    margin-top: 60px;
-    font-size: 20px;
-    color: #333;
+    margin-top: 70px;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+/* Subheading */
+.card p {
+    font-size: 14px;
+    color: #cccccc;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 /* Options List */
 .options {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .options li {
@@ -63,12 +74,25 @@ body, html {
     text-decoration: none;
     color: white;
     background-color: #815dd6;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 10px;
-    display: inline-block;
+    display: block;
+    width: calc(100% - 40px); /* Ensures spacing from both edges */
+    margin: 0 auto;
+    text-align: center;
     transition: background-color 0.3s ease;
 }
 
 .options a:hover {
     background-color: #6d4fc1;
+}
+
+/* Full-width paragraph styling */
+.full-width {
+    width: 100%; /* Takes the full width of the card */
+    text-align: center; /* Centers the text within the element */
+    color: #cccccc;
+    margin: 10px 0;
+    padding: 0 10px; /* Adds padding to keep text from touching card edges */
+    box-sizing: border-box; /* Ensures padding is included in width */
 }
